@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Ex2-Lab5</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bodybody">
+        <div class="center">
+            <div class="header">
+                <h2>Simple Form</h2>
+                
+                
+                
+            </div>
+            <div class="main">
+                <section class="sectionform">
+                    <form action="output.html"  name="form" class="form">
+                      <div>
+                        <label for="">First name:</label>
+                        <input type="text" name="fstname" id="fstname" minlength="2" maxlength="30">
+                      </div>
+
+                      <div>
+                        <label for="">Last name:</label>
+                        <input type="text" name="lstname" id="lstname" minlength="2" maxlength="30">
+                      </div>
+
+                      <div>
+                        <label for="">Email:</label>
+                        <input type="email" name="email" id="email" >
+                      </div>
+
+                      <div>
+                        <label for="">Password name:</label>
+                        <input type="password" name="password" id="password" minlength="2" maxlength="30">
+                      </div>
+                      <div>
+                        <label for="">Your Birthday:</label><br>
+                        <div class="birthday">
+                        <label for="">Day:</label>
+                        <select  id="day" min>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+
+                        </select>
+
+                        <label for="">Month:</label>
+                        <select  id="month">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                        </select>
+
+                        <label for="">Year:</label>
+                        <select  id="year">
+                          <option value="1997">1997</option>
+                          <option value="1998">1998</option>
+                          <option value="1999">1999</option>
+                          <option value="2000">2000</option>
+                          <option value="2001">2001</option>
+                          <option value="2002">2002</option>
+                          <option value="2003">2003</option>
+                          <option value="2004">2004</option>
+                          <option value="2005">2005</option>
+                          <option value="2006">2006</option>
+                          <option value="2007">2007</option>
+                          <option value="2008">2008</option>
+                          <option value="2009">2009</option>
+                          <option value="2010">2010</option>
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                        </select>
+                        </div>
+                      </div>
+
+                      
+
+                      <div>
+                        <fieldset id="gender" name="Gender">
+                            <legend>Gender</legend>
+                            <input type="radio" value="Male" name="gender" id="male">
+                            <label for="male">Male</label>
+                            <br>
+                            <input type="radio" value="Male" name="gender" id="male">
+                            <label for="female" >Female</label>
+                            <br>
+                            <input type="radio" value="Other" name="gender" id="other" checked="checked">
+                            <label for="other">Other</label>
+                            
+                        </fieldset>
+                    </div>
+    
+                    <div class="country">
+                        <label for="">Country:</label>
+
+                        <select  id="country">
+                            <option value="vn">Việt Nam</option>
+                            <option value="au">Australia</option>
+                            <option value="us">United States</option>
+                            <option value="in">India</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea name="about" id="about" cols="30" rows="10" placeholder="About"></textarea>
+                    </div>
+                    <button type="submit" onclick="return(formsubmit());">Submit</button>
+                    <button type="reset">Reset</button>
+                    </form>
+                </section>
+              <script >
+                  function formsubmit() {
+                    if (document.form.fstname.value == ''){
+                alert("Please input first name!");
+                document.form.fstname.focus();
+                return false;
+            } else{
+                if (document.form.fstname.value.length < 2 || document.form.fstname.value.length>30){
+                    alert("First name must in range 2-30 character!");
+                    document.form.fstname.focus();
+                    return false;
+                }
+            }
+
+            if (document.form.lstname.value == ''){
+                alert("Please input last name!");
+                document.form.lstname.focus();
+                return false;
+            } else {
+                if (document.form.lstname.value.length < 2 || document.form.lstname.value.length>30){
+                    alert("Last name must in range 2-30 character!");
+                    document.form.lstname.focus();
+                    return false;
+                }
+            }
+
+                    if (document.form.password.value == ''){
+                      alert("Please input password!");
+                      document.form.password.focus();
+                      return false;
+                    }
+
+                    if (document.form.email.value == ''){
+                      alert("Please input email!");
+                      document.form.email.focus();
+                      return false;
+                    } else {
+                      var special = document.form.email.value.indexOf('@');
+                      var dot = document.form.email.value.lastIndexOf('.');
+
+                    if (dot == -1 || special == -1 || special > dot) {
+                      alert("Email must in form: 'sth@sth.sth'!");
+                      document.form.email.focus();
+                      return false;
+                    }
+
+                  }
+
+                if (document.form.about.value.length >10000){
+                    alert("About must in range 0-10000 character!");
+                    document.form.about.focus();
+                    return false;
+                }
+                alert("Complete!");
+            
+              }
+                  
+              </script>
+                
+
+                
+                
+                
+            </div>
+            <div class="clear"></div>
+                <footer>
+                    
+                    <ul>
+                        <li><a href="#"></a>  </li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </footer>
+            
+        </div>
+        
+        
+    </body>
+</html>

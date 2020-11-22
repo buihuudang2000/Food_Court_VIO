@@ -1,0 +1,91 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.center {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+   
+}
+.header{
+    height: 50px;
+    background-color: #db0007;
+}
+.header h2{
+    margin:0;
+    padding: 10px 10px;
+    color: #ffbc0d;
+    text-align: center;
+}
+
+
+
+.main{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff6e1;
+    
+}
+.sectionform{
+    width: 90%;
+    margin: 0 auto;
+}
+.birthday{
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+}
+select{
+    width: 150px; 
+    padding: 5px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+.country{
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+}
+input[type="text"],input[type="password"],input[type="email"], textarea{
+    width: 100%; 
+    padding: 5px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical ;
+}
+
+.clear{
+    clear: both;
+}
+footer{
+    
+    text-align: center;
+    background-color:  #db0007;
+    color: #ffbc0d;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 5px;
+    color: white;
+}
+
+footer ul li a{
+    color: white;
+}
+
+footer ul li a:hover{
+    color: #ffbc0d;
+}

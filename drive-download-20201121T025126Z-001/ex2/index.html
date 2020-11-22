@@ -1,0 +1,231 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .center{
+            width: 60%;
+            margin: auto;
+        }        
+        input[type=text],input[type=password], textarea {
+            width: 100%; /* Full width */
+            padding: 5px; /* Some padding */  
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        select{
+            width: 20%; /* Full width */
+            padding: 5px; /* Some padding */  
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="center">
+        <section>
+            <h2>Simple Form</h2>
+            <form action="" method="post" name="myform">
+
+                <div>
+                    <label for="first_name">First name</label>
+                    <input type="text" name="first_name" id="first_name">
+                </div>
+
+                <div>
+                    <label for="last_name">Last name</label>
+                    <input type="text" name="last_name" id="last_name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div>
+                    <label for="day">Day</label>
+                    <select name="day" id="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+
+                    <label for="month">Month</label>
+                    <select name="month" id="month">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+                    <label for="month">Month</label>
+                    <select name="month" id="month">
+                        <option value="1997">1997</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </div>
+
+                <div>
+                    <fieldset id="gender" name="Gender">
+                        <legend>Gender</legend>
+                        <label for="male">Male</label>
+                        <input type="radio" value="Male" name="gender" id="male">
+                        <label for="female">Female</label>
+                        <input type="radio" value="Female" name="gender" id="female">
+                        <label for="other">Other</label>
+                        <input type="radio" value="Other" name="gender" id="other" checked="checked">
+                    </fieldset>
+                </div>
+
+                <div>
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="vn">Việt Nam</option>
+                        <option value="au">Australia</option>
+                        <option value="us">United States</option>
+                        <option value="in">India</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <textarea name="about" id="about" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit" onclick="return(formvalidate());">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </div>
+
+
+    <script>
+        function formvalidate() {
+            if (document.myform.first_name.value == ''){
+                alert("Please input first name!");
+                document.myform.first_name.focus();
+                return false;
+            } else{
+                if (document.myform.first_name.value.length < 2 || document.myform.first_name.value.length>30){
+                    alert("First name must in range 2-30 character!");
+                    document.myform.first_name.focus();
+                    return false;
+                }
+            }
+
+            if (document.myform.last_name.value == ''){
+                alert("Please input last name!");
+                document.myform.last_name.focus();
+                return false;
+            } else {
+                if (document.myform.last_name.value.length < 2 || document.myform.last_name.value.length>30){
+                    alert("Last name must in range 2-30 character!");
+                    document.myform.last_name.focus();
+                    return false;
+                }
+            }
+
+            if (document.myform.password.value == ''){
+                alert("Please input password!");
+                document.myform.password.focus();
+                return false;
+            } else {
+                if (document.myform.password.value.length < 2 || document.myform.password.value.length>30){
+                    alert("Password must in range 2-30 character!");
+                    document.myform.password.focus();
+                    return false;
+                }
+            }
+
+            
+
+            if (document.myform.email.value == ''){
+                alert("Please input email!");
+                document.myform.email.focus();
+                return false;
+            } else {
+                var special = document.myform.email.value.indexOf('@');
+                var dot = document.myform.email.value.lastIndexOf('.');
+
+                if (dot == -1 || special == -1 || special > dot) {
+                    alert("Email must in form: 'sth@sth.sth'!");
+                    document.myform.email.focus();
+                    return false;
+                }
+
+            }
+            
+            
+            alert("Complete!")
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.center {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+   
+}
+.header{
+    height: 50px;
+    background-color: #db0007;
+}
+.header h2{
+    margin:0;
+    padding: 10px 10px;
+    color: #ffbc0d;
+    text-align: center;
+}
+
+
+
+.main{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff6e1;
+    
+}
+input{
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(75, 75, 75);
+}
+.custom{
+    width: 100%;
+}
+  
+.custom1{
+    height: 30px;
+    width: 97%;
+    
+}
+.operator{
+    background-color: #ffbc0d;
+}
+td{
+    
+    border: 1px solid black;
+}
+
+table{
+    margin: auto;
+}
+
+
+.clear{
+    clear: both;
+}
+footer{
+    
+    text-align: center;
+    background-color:  #db0007;
+    color: #ffbc0d;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    position: relative;
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 5px;
+    color: white;
+}
+
+footer ul li a{
+    color: white;
+}
+
+footer ul li a:hover{
+    color: #ffbc0d;
+}
